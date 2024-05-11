@@ -10,10 +10,10 @@ Discover the latest `<crypto/>` moves in my Telegram Channel:
 Bot used to batch withdrawal on [Coinex exchange](https://www.coinex.com/register?refer_code=uy4wg)
 
 
-### What is bot for?
-   - Not sybling onchain wallets
-   - Farm Points
-   - Check Points
+### How it can be useful?
+   - Not sibling onchain wallets
+   - Top-up bybit accounts for events
+   - Exchange with the lowest fees (0.06 $ for USDT BSC, 0.7 $ for ETH)
 
 
 ## Quick Start 📚
