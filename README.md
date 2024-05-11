@@ -9,7 +9,6 @@ Discover the latest `<crypto/>` moves in my Telegram Channel:
 
 Bot used to batch withdrawal on [Coinex exchange](https://www.coinex.com/register?refer_code=uy4wg)
 
-
 ### How it can be useful?
    - Not sibling onchain wallets
    - Top-up bybit accounts for events
@@ -28,7 +27,8 @@ Bot used to batch withdrawal on [Coinex exchange](https://www.coinex.com/registe
 
 1. Coinex Account Setup
  - [Create](https://www.coinex.com/en/apikey) and put in `data/config.py` `ACCESS_ID` and `SECRET_KEY`. 
- - Add addresses in whitelist!
+ - Add addresses in whitelist! To create csv file with many whitelist address - [csv-generator](https://tableconvert.com/csv-generator).
+![image](https://github.com/MsLolita/Coinex-withdrawer/assets/58307006/55e276f5-472d-414d-8075-b249eafee363)
 ![image](https://github.com/MsLolita/Coinex-withdrawer/assets/58307006/98b3b03c-56b7-46ce-88e1-772e2331776d)
 
 2. Addresses Setup 🔒
