@@ -32,10 +32,9 @@ async def worker_task(_id, address: str):
     try:
         coinex = Coinex(ACCESS_ID, SECRET_KEY)
 
-        response = await coinex.withdraw(TICKER, get_random_amount(*AMOUNT), address, params={"smart_contract_name": CHAIN})
+        response = await coinex.withdraw(TICKER, get_random_amount(*AMOUNT), address, params={"chain": CHAIN})
         resp_info = response['info']
-
-        explorer = resp_info['add_explorer']
+        explorer = resp_info['explorer_tx_url']
         amount = resp_info['amount']
         fees = resp_info['fee_amount']
         actual_amount = resp_info['actual_amount']
@@ -43,7 +42,7 @@ async def worker_task(_id, address: str):
         logger.info(f"{_id} | Withdraw {actual_amount} {TICKER} ({amount} (cost) - {fees} (fees)) to {address} | {explorer}")
         return True
     except ccxt.ExchangeError as e:
-        logger.error(f"{_id} | Exchange error: {e}")
+        logger.error(f"{_id} | Exchange error: {e} | {traceback.format_exc()}")
     except Exception as e:
         logger.error(f"{_id} | not handled exception | error: {e} {traceback.format_exc()}")
     finally:
